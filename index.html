@@ -1,21 +1,511 @@
-<!DOCTYPE html>
-<html lang="de" data-bs-theme="dark">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Dark Mode mit Check-Wary</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container py-5">
-        <h1 class="mb-4">Willkommen zur Landing Page</h1>
-        <div class="form-check form-check-warning">
-            <input class="form-check-input" type="checkbox" value="" id="warnCheck">
-            <label class="form-check-label text-warning" for="warnCheck">Warnung aktivieren</label>
-        </div>
-        <p class="mt-3 text-muted">Diese Seite nutzt Bootstrap im dunklen Design mit einer "Check-Wary"-Checkbox als Beispiel.</p>
-    </div>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CheckWary helps teams detect risky changes, prevent misconfigurations, and ship securely—fast." />
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <meta property="og:title" content="CheckWary — Ship securely, stay wary." />
+  <meta property="og:description" content="Premium dark-mode security landing page template with a risk-scan demo." />
+  <meta property="og:type" content="website" />
+
+  <title>CheckWary — premium change-risk security</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="cw-body">
+  <a class="visually-hidden-focusable cw-skip" href="#main">Skip to content</a>
+
+  <!-- Ambient layers -->
+  <div class="cw-ambient cw-ambient-1" aria-hidden="true"></div>
+  <div class="cw-ambient cw-ambient-2" aria-hidden="true"></div>
+  <div class="cw-grid" aria-hidden="true"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top cw-nav" aria-label="Primary">
+    <div class="container py-2">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#top" aria-label="CheckWary home">
+        <span class="cw-mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L20 6V12C20 17 16.5 20.5 12 22C7.5 20.5 4 17 4 12V6L12 2Z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M8.5 12.2L10.7 14.4L15.6 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="fw-semibold">CheckWary</span>
+        <span class="badge text-bg-dark border border-secondary-subtle ms-1">Beta</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how">How it works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#integrations">Integrations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-outline-light btn-sm" href="#cta">Request demo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- Hero -->
+    <header id="top" class="container py-5 py-lg-6">
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-6">
+          <p class="text-uppercase cw-kicker mb-2">Ship securely • stay wary</p>
+          <h1 class="display-5 fw-bold lh-1 mb-3">
+            Make every deploy feel <span class="cw-grad">boringly safe</span>.
+          </h1>
+          <p class="lead text-secondary-emphasis cw-lead mb-4">
+            CheckWary continuously evaluates change risk across infrastructure, clusters, and pipelines—then explains what matters in plain language.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary btn-lg" href="#cta">Get a demo</a>
+            <a class="btn btn-outline-light btn-lg" href="#risk-scan">Try the risk scan</a>
+          </div>
+
+          <div class="mt-4 d-flex flex-wrap gap-3 text-secondary-emphasis small">
+            <div class="d-flex align-items-center gap-2"><span class="cw-dot" aria-hidden="true"></span><span>Setup in minutes</span></div>
+            <div class="d-flex align-items-center gap-2"><span class="cw-dot" aria-hidden="true"></span><span>Policy-as-code</span></div>
+            <div class="d-flex align-items-center gap-2"><span class="cw-dot" aria-hidden="true"></span><span>Built for CI/CD</span></div>
+          </div>
+
+          <div class="mt-4 cw-trust">
+            <div class="cw-trust-pill">
+              <span class="cw-mini" aria-hidden="true">SOC2</span>
+              <span class="text-secondary-emphasis small">Ready</span>
+            </div>
+            <div class="cw-trust-pill">
+              <span class="cw-mini" aria-hidden="true">SAML</span>
+              <span class="text-secondary-emphasis small">Enterprise SSO</span>
+            </div>
+            <div class="cw-trust-pill">
+              <span class="cw-mini" aria-hidden="true">IaC</span>
+              <span class="text-secondary-emphasis small">Terraform + K8s</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <!-- Showcase + Risk scan demo -->
+          <div class="cw-glass p-4 p-lg-4" id="risk-scan">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <span class="cw-chip" aria-hidden="true"></span>
+                <span class="fw-semibold">Risk Scan (demo)</span>
+              </div>
+              <span class="badge rounded-pill text-bg-dark border border-secondary-subtle">No data leaves your browser</span>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-12 col-md-5">
+                <div class="cw-scorecard p-3">
+                  <div class="text-secondary-emphasis small">Current risk score</div>
+                  <div class="d-flex align-items-end gap-2">
+                    <div class="display-5 fw-bold mb-0" id="riskScore">52</div>
+                    <div class="mb-2">
+                      <span class="badge rounded-pill" id="riskBadge">Medium</span>
+                    </div>
+                  </div>
+                  <div id="riskAdvice" class="text-secondary-emphasis small" aria-live="polite">
+                    Review IAM changes and enforce least privilege before merging.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-7">
+                <div class="cw-card p-3 h-100">
+                  <label for="riskRange" class="form-label mb-2">Move the slider to simulate a change-risk scan</label>
+                  <input id="riskRange" class="form-range" type="range" min="0" max="100" step="1" value="52" />
+
+                  <div class="d-flex flex-wrap gap-2 mt-2">
+                    <button class="btn btn-sm btn-outline-light" type="button" data-risk="18">Safe config</button>
+                    <button class="btn btn-sm btn-outline-light" type="button" data-risk="47">Minor drift</button>
+                    <button class="btn btn-sm btn-outline-light" type="button" data-risk="76">Public exposure</button>
+                    <button class="btn btn-sm btn-outline-light" type="button" data-risk="92">Privilege escalation</button>
+                  </div>
+
+                  <hr class="border-secondary-subtle my-3" />
+
+                  <div class="cw-mini-grid">
+                    <div class="cw-mini-metric">
+                      <div class="text-secondary-emphasis small">Policies checked</div>
+                      <div class="h5 mb-0" id="riskPolicies">128</div>
+                    </div>
+                    <div class="cw-mini-metric">
+                      <div class="text-secondary-emphasis small">Findings</div>
+                      <div class="h5 mb-0" id="riskFindings">3</div>
+                    </div>
+                    <div class="cw-mini-metric">
+                      <div class="text-secondary-emphasis small">Time</div>
+                      <div class="h5 mb-0"><span id="riskTime">1.2</span>s</div>
+                    </div>
+                  </div>
+
+                  <div class="mt-3 text-secondary-emphasis small">Tip: In production, CheckWary links the risk back to the exact commit, rule, and resource.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 d-flex flex-wrap gap-2">
+              <span class="badge text-bg-dark border border-secondary-subtle">AWS</span>
+              <span class="badge text-bg-dark border border-secondary-subtle">Kubernetes</span>
+              <span class="badge text-bg-dark border border-secondary-subtle">Terraform</span>
+              <span class="badge text-bg-dark border border-secondary-subtle">GitHub Actions</span>
+              <span class="badge text-bg-dark border border-secondary-subtle">GitLab CI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logos strip -->
+      <section class="mt-5 pt-4">
+        <p class="text-secondary-emphasis small text-uppercase mb-3">Trusted by teams that ship daily</p>
+        <div class="row g-3 align-items-center cw-logos">
+          <div class="col-6 col-md-3"><div class="cw-logo">Northwind</div></div>
+          <div class="col-6 col-md-3"><div class="cw-logo">Contoso</div></div>
+          <div class="col-6 col-md-3"><div class="cw-logo">Globex</div></div>
+          <div class="col-6 col-md-3"><div class="cw-logo">Initech</div></div>
+        </div>
+      </section>
+    </header>
+
+    <!-- Features -->
+    <section id="features" class="container py-5 py-lg-6">
+      <div class="row align-items-end mb-4">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Signal over noise</h2>
+          <p class="text-secondary-emphasis mb-0">A security layer built for builders: less panic, more clarity.</p>
+        </div>
+        <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
+          <a href="#pricing" class="btn btn-outline-light">See pricing</a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="cw-card h-100 p-4">
+            <div class="cw-icon mb-3" aria-hidden="true"> 
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12C7 12 7 6 10 6C13 6 13 18 16 18C19 18 19 12 22 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="h5">Risk-ranked findings</h3>
+            <p class="text-secondary-emphasis mb-0">Prioritize what can hurt you now, not what is merely “non-ideal.”</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="cw-card h-100 p-4">
+            <div class="cw-icon mb-3" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 7H17V17H7V7Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M4 12H7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M17 12H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M12 4V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M12 17V20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="h5">Policy-as-code</h3>
+            <p class="text-secondary-emphasis mb-0">Write guardrails once, enforce across IaC, clusters, and pipelines.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="cw-card h-100 p-4">
+            <div class="cw-icon mb-3" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12L10 17L19 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="h5">Minimal fixes</h3>
+            <p class="text-secondary-emphasis mb-0">Every alert includes the smallest safe diff to resolve it.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="cw-card h-100 p-4">
+            <div class="cw-icon mb-3" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2V6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M12 18V22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M4.9 4.9L7.7 7.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M16.3 16.3L19.1 19.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M2 12H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M18 12H22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M4.9 19.1L7.7 16.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M16.3 7.7L19.1 4.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M12 8.5A3.5 3.5 0 1 0 12 15.5A3.5 3.5 0 0 0 12 8.5Z" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+            </div>
+            <h3 class="h5">Continuous posture</h3>
+            <p class="text-secondary-emphasis mb-0">Detect drift and surprises after deploy—before attackers do.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="cw-card h-100 p-4">
+            <div class="cw-icon mb-3" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 21C16.418 21 20 17.418 20 13C20 8.582 16.418 5 12 5C7.582 5 4 8.582 4 13C4 17.418 7.582 21 12 21Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M12 9V13L15 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="h5">Fast feedback</h3>
+            <p class="text-secondary-emphasis mb-0">Inline results where devs live: PR checks and build logs.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="cw-card h-100 p-4">
+            <div class="cw-icon mb-3" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 7H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M7 7V17C7 18.657 8.343 20 10 20H14C15.657 20 17 18.657 17 17V7" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M9 11H15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M9 14H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="h5">Audit-ready trails</h3>
+            <p class="text-secondary-emphasis mb-0">Who approved what and why—captured automatically for compliance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="container pb-5 pb-lg-6">
+      <div class="row align-items-end mb-4">
+        <div class="col-lg-8">
+          <h2 class="fw-bold">How it works</h2>
+          <p class="text-secondary-emphasis mb-0">Three steps from “change” to “confidence.”</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="cw-step h-100 p-4">
+            <div class="cw-step-n">01</div>
+            <h3 class="h5">Connect</h3>
+            <p class="text-secondary-emphasis mb-0">Link repos, IaC, and clusters. No agent sprawl—start where you already ship.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="cw-step h-100 p-4">
+            <div class="cw-step-n">02</div>
+            <h3 class="h5">Evaluate</h3>
+            <p class="text-secondary-emphasis mb-0">Run policies + contextual risk scoring on every PR and deploy.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="cw-step h-100 p-4">
+            <div class="cw-step-n">03</div>
+            <h3 class="h5">Act</h3>
+            <p class="text-secondary-emphasis mb-0">Block, approve, or remediate with minimal diffs and clear ownership.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrations -->
+    <section id="integrations" class="container pb-5 pb-lg-6">
+      <div class="cw-glass p-4 p-lg-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-2">Integrations that don’t fight your workflow</h2>
+            <p class="text-secondary-emphasis mb-0">Native checks for pipelines, tickets, and chat tools. Bring your own policies and keep ownership with teams.</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-6"><div class="cw-logo">GitHub</div></div>
+              <div class="col-6"><div class="cw-logo">GitLab</div></div>
+              <div class="col-6"><div class="cw-logo">Slack</div></div>
+              <div class="col-6"><div class="cw-logo">Jira</div></div>
+              <div class="col-6"><div class="cw-logo">Kubernetes</div></div>
+              <div class="col-6"><div class="cw-logo">Terraform</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container pb-5 pb-lg-6">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="cw-card h-100 p-4">
+            <div class="display-6 fw-bold">-62%</div>
+            <div class="text-secondary-emphasis">Fewer noisy alerts after switching to risk-ranked findings.</div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="cw-card h-100 p-4">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <figure class="mb-0">
+                  <blockquote class="blockquote mb-2">“It’s the first tool that explains risk like a teammate, not a siren.”</blockquote>
+                  <figcaption class="blockquote-footer text-secondary-emphasis">Security Lead, SaaS</figcaption>
+                </figure>
+              </div>
+              <div class="col-md-6">
+                <figure class="mb-0">
+                  <blockquote class="blockquote mb-2">“We gate only the high-impact changes now. Dev velocity stayed high—and incidents dropped.”</blockquote>
+                  <figcaption class="blockquote-footer text-secondary-emphasis">Platform Engineer, FinTech</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="container py-5 py-lg-6">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Pricing</h2>
+        <p class="text-secondary-emphasis mb-0">Start free. Grow into control.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-md-6 col-lg-4">
+          <div class="cw-card h-100 p-4">
+            <h3 class="h5">Starter</h3>
+            <p class="text-secondary-emphasis">For small teams beginning with guardrails.</p>
+            <div class="display-6 fw-bold">€0<span class="fs-6 text-secondary-emphasis">/mo</span></div>
+            <ul class="mt-3 text-secondary-emphasis">
+              <li>Basic policy checks</li>
+              <li>1 environment</li>
+              <li>Email support</li>
+            </ul>
+            <a class="btn btn-outline-light w-100 mt-3" href="#cta">Try free</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="cw-card cw-card-featured h-100 p-4">
+            <div class="d-flex align-items-center justify-content-between">
+              <h3 class="h5 mb-0">Pro</h3>
+              <span class="badge rounded-pill text-bg-primary">Most popular</span>
+            </div>
+            <p class="text-secondary-emphasis mt-2">For teams shipping daily with confidence.</p>
+            <div class="display-6 fw-bold">€49<span class="fs-6 text-secondary-emphasis">/seat/mo</span></div>
+            <ul class="mt-3 text-secondary-emphasis">
+              <li>Risk-ranked findings</li>
+              <li>CI/CD gating</li>
+              <li>Unlimited environments</li>
+              <li>Chat alerts</li>
+            </ul>
+            <a class="btn btn-primary w-100 mt-3" href="#cta">Request demo</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="cw-card h-100 p-4">
+            <h3 class="h5">Enterprise</h3>
+            <p class="text-secondary-emphasis">For regulated orgs and complex estates.</p>
+            <div class="display-6 fw-bold">Custom</div>
+            <ul class="mt-3 text-secondary-emphasis">
+              <li>SAML / SCIM</li>
+              <li>Dedicated policy packs</li>
+              <li>On‑prem / VPC</li>
+              <li>Priority support</li>
+            </ul>
+            <a class="btn btn-outline-light w-100 mt-3" href="#cta">Talk to sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="container pb-5 pb-lg-6">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <h2 class="fw-bold">FAQ</h2>
+          <p class="text-secondary-emphasis mb-0">Quick answers to common questions.</p>
+        </div>
+      </div>
+
+      <div class="accordion accordion-flush cw-accordion" id="faqAcc">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false" aria-controls="q1">What does CheckWary integrate with?</button>
+          </h3>
+          <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body text-secondary-emphasis">Out of the box: GitHub/GitLab, Terraform, Kubernetes, and popular cloud providers. More connectors can be added via webhooks.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">Does it block deployments?</button>
+          </h3>
+          <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body text-secondary-emphasis">If you want. Start in “observe” mode, then enable gating for specific policies once you’re comfortable.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">Is this a real product?</button>
+          </h3>
+          <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body text-secondary-emphasis">This is a template/demo page. Swap the copy, branding, and forms for your real offering.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="cta" class="container pb-5 pb-lg-6">
+      <div class="cw-glass p-4 p-lg-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <h2 class="fw-bold mb-2">Want the demo policy pack?</h2>
+            <p class="text-secondary-emphasis mb-0">Leave your email and we’ll send a demo link and a sample policy pack. (Demo-only form.)</p>
+          </div>
+          <div class="col-lg-5">
+            <form class="row g-2" onsubmit="return window.cwSubmitDemo(event)">
+              <div class="col-12">
+                <label class="form-label text-secondary-emphasis small" for="email">Work email</label>
+                <input id="email" class="form-control form-control-lg" type="email" required placeholder="name@company.com" />
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary btn-lg w-100" type="submit">Send demo link</button>
+              </div>
+              <div class="col-12">
+                <div id="formMsg" class="small text-secondary-emphasis" role="status" aria-live="polite"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container pb-5">
+    <div class="d-flex flex-column flex-md-row justify-content-between gap-3 align-items-start align-items-md-center">
+      <div class="text-secondary-emphasis small">© <span id="year"></span> CheckWary. All rights reserved.</div>
+      <div class="d-flex gap-3">
+        <a class="link-secondary" href="#features">Features</a>
+        <a class="link-secondary" href="#how">How</a>
+        <a class="link-secondary" href="#pricing">Pricing</a>
+        <a class="link-secondary" href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
